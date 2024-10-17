@@ -40,17 +40,43 @@ Task 1 --> to find Flop ratio (no. of DFFs required by design) dfxtp2
 Flop count = dfxtps present / Total no. of cells
 >> cd reports/synthesis/yosys.rpt contains Report of synthesis done
 
-<img width="587"  alt="Day_1_1st" align="center" src="https://github.com/user-attachments/assets/86ea864f-a067-4728-8fb6-e29a1b167942">
-
 ![Day_1_1st](https://github.com/user-attachments/assets/86ea864f-a067-4728-8fb6-e29a1b167942)
+
+![Day_1_2nd](https://github.com/user-attachments/assets/54066379-1cea-4513-8bef-4ada25778b7e)
+
+![Day_1_3rd](https://github.com/user-attachments/assets/9856dcaf-bf96-40c2-a36b-17140be30ece)
+
+![Day_1_4th](https://github.com/user-attachments/assets/adeb3ee3-2749-4f68-9a29-aeeda652fe42)
+
+![Day_1_5th](https://github.com/user-attachments/assets/21afc9e1-00ca-44ea-a8fd-d3e71fada072)
+
 </details>
+
 
 <details>
   <summary>Day 2: Good floorplan vs bad floorplan and introduction to library cells</summary>
+
+
+![Day_2_1st](https://github.com/user-attachments/assets/128ee5bf-9e44-4633-bcba-e5f4ee592727)
+
+![Day_2_2nd](https://github.com/user-attachments/assets/60be9a64-fb77-45ed-9ebc-4df210783c9c)
+
+![Day_2_3rd](https://github.com/user-attachments/assets/d5b90993-53ac-4de7-9b00-0b07daa692b0)
+
+![Day_2_4th](https://github.com/user-attachments/assets/e4275ee7-d59b-4ad2-8ea2-e7fa419a0f8c)
+
+![Day_2_5th](https://github.com/user-attachments/assets/f3737117-30f9-4216-9832-9dca6bc74d95)
+
+![Day_2_6th](https://github.com/user-attachments/assets/16059256-a109-4649-a6cb-cf25664fe5a5)
+
+![Day_2_7th](https://github.com/user-attachments/assets/da7dc87c-a7b7-4372-ab6e-bf60e30f2648)
+
 </details>
 
 <details>
   <summary>Day 3: Design library cell using Magic Layout and ngspice characterization</summary>
+
+
 </details>
 
 <details>
