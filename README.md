@@ -281,13 +281,25 @@ Screenshot of generated plot
 
 ![Day_3_ngspice_plot](https://github.com/user-attachments/assets/a3991fc9-56b8-4d1a-bbd7-a7cd371e417e)
 
+'''
+Rise transition time = (Time taken for output to rise to 80%) - (Time taken for output to rise to 20%)
+
+Fall transition time = (Time taken for output to fall to 20%) - (Time taken for output to fall to 80%)
+
+20% of output = 20% of 3.3V = 660 mV
+
+80% of output = 80% of 3.3V = 2.64 V
+'''
+
 ![Day_3_20_per](https://github.com/user-attachments/assets/ca305e95-bfcd-4397-8f6c-7ba24a3a3a95)
 
 ![Day_3_80_per](https://github.com/user-attachments/assets/32683d09-e57d-4465-bdc9-9d5f27356879)
 
 ![Day_3_50_per](https://github.com/user-attachments/assets/41fe92a2-3037-4daf-aebb-67ead61809bb)
 
-
+'''
+DRC checks & corrected tech file
+'''
 
 ![Day_3_met3](https://github.com/user-attachments/assets/b45bf466-b504-449a-906d-d144908eb24a)
 ![Day_3_drc](https://github.com/user-attachments/assets/ef3b1227-50ff-4c0d-be11-bc1a0e4f2721)
@@ -445,9 +457,21 @@ run_synthesis
 
 Screenshots of commands run
 
+![start_openlane](https://github.com/user-attachments/assets/1c78c132-628d-4e01-b550-6c100c53cd3b)
+
+![lef_&_synth](https://github.com/user-attachments/assets/b47f13d6-556e-454d-b00e-0e98d0acb360)
+
+![synth_complete](https://github.com/user-attachments/assets/0d1333db-254d-49ae-9afb-91ba965c6b48)
+
+
 #### 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
 
 Noting down current design values generated before modifying parameters to improve timing
+
+![chip_area](https://github.com/user-attachments/assets/6bd6970a-ee71-4bd2-b2bb-9f4cba5fb0c2)
+
+
+![tns_&_wns](https://github.com/user-attachments/assets/66b85c75-a4c4-4f19-bb93-3ae1ee113de4)
 
 Commands to view and change parameters to improve timing and run synthesis
 
