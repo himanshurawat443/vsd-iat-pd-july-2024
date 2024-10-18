@@ -50,7 +50,7 @@ prep -design picorv32a
 run_synthesis
 
 ```
-Screenshots of commands runned 
+Screenshots of commands run
 
 ![Day_1_1st](https://github.com/user-attachments/assets/86ea864f-a067-4728-8fb6-e29a1b167942)
 
@@ -75,7 +75,7 @@ Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
 
 ##
 <details>
-  <summary>**Day 2: Good floorplan vs bad floorplan and introduction to library cells**</summary>
+  <summary>Day 2: Good floorplan vs bad floorplan and introduction to library cells</summary>
 
   ## Lab Work
 Section 2 tasks:- 
@@ -169,7 +169,126 @@ Port layer as set through config.tcl
 
 ##
 <details>
-  <summary>Day 3: Design library cell using Magic Layout and ngspice characterization**</summary>
+  <summary>Day 3: Design library cell using Magic Layout and ngspice characterization</summary>
+
+  ## Lab Work
+**Section 3 tasks**:-
+1. Clone custom inverter standard cell design from github repository: [Standard cell design and characterization using OpenLANE flow](https://github.com/nickson-jose/vsdstdcelldesign).
+2. Load the custom inverter layout in magic and explore.
+3. Spice extraction of inverter in magic.
+4. Editing the spice model file for analysis through simulation.
+5. Post-layout ngspice simulations.
+6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
+
+#### 1. Clone custom inverter standard cell design from github repository
+
+```bash
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Clone the repository with custom inverter design
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+
+# Change into repository directory
+cd vsdstdcelldesign
+
+# Copy magic tech file to the repo directory for easy access
+cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech .
+
+# Check contents whether everything is present
+ls
+
+# Command to open custom inverter layout in magic
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+Screenshot of commands run
+<img width="615" alt="Day_3_3rd" src="https://github.com/user-attachments/assets/d7807495-7218-4cda-970f-7d7ac2e132c1">
+
+#### 2. Load the custom inverter layout in magic and explore.
+
+Screenshot of custom inverter layout in magic
+
+<img width="533" alt="Day_3_4th" src="https://github.com/user-attachments/assets/413d2e57-6f0d-4f91-8886-7e9e6be231e2">
+
+NMOS and PMOS identified
+
+<img width="454" alt="Day_3_5th" src="https://github.com/user-attachments/assets/9c5c3704-287c-48dd-b467-ebcc0bd54e47">
+<img width="395" alt="Day_3_6th" src="https://github.com/user-attachments/assets/79372808-24ac-48a0-879c-30015f4dde7e">
+
+Output Y connectivity to PMOS and NMOS drain verified
+
+<img width="242" alt="Day_3_7th" src="https://github.com/user-attachments/assets/aeb46ccb-2ed4-41df-b926-f6f9efc9c14a">
+
+PMOS source connectivity to VDD (here VPWR) verified
+
+<img width="217" alt="Day_3_8th" src="https://github.com/user-attachments/assets/8a84338a-34db-4b5c-b789-759a6d7fdbc7">
+
+NMOS source connectivity to VSS (here VGND) verified
+
+<img width="269" alt="Day_3_9th" src="https://github.com/user-attachments/assets/48df8798-6ef7-4509-85b3-594d7c8058c2">
+
+#### 3. Spice extraction of inverter in magic.
+
+Commands for spice extraction of the custom inverter layout to be used in tkcon window of magic
+
+```tcl
+# Check current directory
+pwd
+
+# Extraction command to extract to .ext format
+extract all
+
+# Before converting ext to spice this command enable the parasitic extraction also
+ext2spice cthresh 0 rthresh 0
+
+# Converting to ext to spice
+ext2spice
+```
+
+Screenshot of tkcon window after running above commands
+
+<img width="443" alt="Day_3_10th" src="https://github.com/user-attachments/assets/e955eede-332a-421c-a183-bd02cf4be25e">
+
+Screenshot of created spice file
+
+<img width="367" alt="Day_3_sp_initial" src="https://github.com/user-attachments/assets/4cdaa7fc-1f54-43ad-9d62-18737db7ecb6">
+
+#### 4. Editing the spice model file for analysis through simulation.
+
+Final edited spice file ready for ngspice simulation
+
+<img width="374" alt="Day_3_sp_final" src="https://github.com/user-attachments/assets/c662846c-10bf-4c5a-8766-6f1a05bc715e">
+
+#### 5. Post-layout ngspice simulations.
+
+Commands for ngspice simulation
+
+```bash
+# Command to directly load spice file for simulation to ngspice
+ngspice sky130_inv.spice
+
+# Now that we have entered ngspice with the simulation spice file loaded we just have to load the plot
+plot y vs time a
+```
+
+Screenshots of ngspice run
+
+<img width="564" alt="Day_3_ngspice_1" src="https://github.com/user-attachments/assets/d5b440a7-bbd5-4257-a109-07514cb6b535">
+
+Screenshot of generated plot
+
+<img width="559" alt="Day_3_ngspice_plot" src="https://github.com/user-attachments/assets/a3991fc9-56b8-4d1a-bbd7-a7cd371e417e">
+
+<img width="439" alt="Day_3_20_per" src="https://github.com/user-attachments/assets/ca305e95-bfcd-4397-8f6c-7ba24a3a3a95">
+<img width="499" alt="Day_3_80_per" src="https://github.com/user-attachments/assets/32683d09-e57d-4465-bdc9-9d5f27356879">
+<img width="506" alt="Day_3_50_per" src="https://github.com/user-attachments/assets/41fe92a2-3037-4daf-aebb-67ead61809bb">
+
+
+
+
+<img width="559" alt="Day_3_met3" src="https://github.com/user-attachments/assets/b45bf466-b504-449a-906d-d144908eb24a">
+<img width="560" alt="Day_3_drc" src="https://github.com/user-attachments/assets/ef3b1227-50ff-4c0d-be11-bc1a0e4f2721">
 
 
 </details>
