@@ -2,9 +2,9 @@
 # Digital VLSI SoC design & Planning
 > 2 Week digital VLSI SoC design and planning workshop with complete RTL2GDSII flow organised by VSD in collaboration with NASSCOM
 
-
+##
 <details>
-  <summary>**Day 1: Inception of open-source EDA, OpenLANE and Sky130 PDK**</summary>
+  <summary>Day 1: Inception of open-source EDA, OpenLANE and Sky130 PDK</summary>
 
 ## Lab work
 - **Core** is an area in the chip where the fundamental logic of the design is placed. It encapsulates all the combinational circuit, soft and hard IPs, and nets.
@@ -73,10 +73,11 @@ Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
 
 </details>
 
-
+##
 <details>
   <summary>**Day 2: Good floorplan vs bad floorplan and introduction to library cells**</summary>
-## Lab Work
+
+  ## Lab Work
 Section 2 tasks:- 
 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 2. Calculate the die area in microns from the values in floorplan def.
@@ -166,16 +167,19 @@ Port layer as set through config.tcl
 
 </details>
 
+##
 <details>
-  <summary>**Day 3: Design library cell using Magic Layout and ngspice characterization**</summary>
+  <summary>Day 3: Design library cell using Magic Layout and ngspice characterization**</summary>
 
 
 </details>
 
+##
 <details>
-  <summary>**Day 4: Pre-layout timing analysis and importance of good clock tree**</summary>
+  <summary>Day 4: Pre-layout timing analysis and importance of good clock tree</summary>
 </details>
 
+##
 <details>
-  <summary>**Day 5: Final steps for RTL2GDS using tritonRoute and openSTA**</summary>
+  <summary>Day 5: Final steps for RTL2GDS using tritonRoute and openSTA</summary>
 </details>
