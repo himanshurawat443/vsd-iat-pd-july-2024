@@ -4,7 +4,7 @@
 
 
 <details>
-  <summary>Day 1: Inception of open-source EDA, OpenLANE and Sky130 PDK</summary>
+  <summary>**Day 1: Inception of open-source EDA, OpenLANE and Sky130 PDK**</summary>
 
 ## Lab work
 - **Core** is an area in the chip where the fundamental logic of the design is placed. It encapsulates all the combinational circuit, soft and hard IPs, and nets.
@@ -49,11 +49,6 @@ prep -design picorv32a
 # Now that the design is prepped and ready, we can run synthesis using following command
 run_synthesis
 
-# Exit from OpenLANE flow
-exit
-
-# Exit from OpenLANE flow docker sub-system
-exit
 ```
 Screenshots of commands runned 
 
@@ -80,8 +75,8 @@ Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
 
 
 <details>
-  <summary>Day 2: Good floorplan vs bad floorplan and introduction to library cells</summary>
-
+  <summary>**Day 2: Good floorplan vs bad floorplan and introduction to library cells**</summary>
+## Lab Work
 Section 2 tasks:- 
 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 2. Calculate the die area in microns from the values in floorplan def.
@@ -89,8 +84,8 @@ Section 2 tasks:-
 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
 5. Load generated placement def in magic tool and explore the placement.
 
-```math
-Area\ of\ die\ in\ microns = Die\ width\ in\ microns * Die\ height\ in\ microns
+```
+Area of die in microns = Die width in microns * Die height in microns
 ```
 #### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 
@@ -134,26 +129,20 @@ Screenshot of floorplan run
 
 #### 2. Calculate the die area in microns from the values in floorplan def.
 According to floorplan def
-```math
-1000\ Unit\ Distance = 1\ Micron
 ```
-```math
-Die\ width\ in\ unit\ distance = 660685 - 0 = 660685
-```
-```math
-Die\ height\ in\ unit\ distance = 671405 - 0 = 671405
-```
-```math
-Distance\ in\ microns = \frac{Value\ in\ Unit\ Distance}{1000}
-```
-```math
-Die\ width\ in\ microns = \frac{660685}{1000} = 660.685\ Microns
-```
-```math
-Die\ height\ in\ microns = \frac{671405}{1000} = 671.405\ Microns
-```
-```math
-Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Square\ Microns
+1000 Unit Distance = 1 Micron
+
+Die width in unit distance = 660685 - 0 = 660685
+
+Die height in unit distance = 671405 - 0 = 671405
+
+Distance in microns = Value in Unit Distance / 1000
+
+Die width in microns = 660685 / 1000} = 660.685 Microns
+
+Die height in microns = 671405 / 1000 = 671.405 Microns
+
+Area of die in microns = 660.685 * 671.405 = 443587.212425 Square Microns
 ```
 #### 3. Load generated floorplan def in magic tool and explore the floorplan.
 
@@ -178,15 +167,15 @@ Port layer as set through config.tcl
 </details>
 
 <details>
-  <summary>Day 3: Design library cell using Magic Layout and ngspice characterization</summary>
+  <summary>**Day 3: Design library cell using Magic Layout and ngspice characterization**</summary>
 
 
 </details>
 
 <details>
-  <summary>Day 4: Pre-layout timing analysis and importance of good clock tree</summary>
+  <summary>**Day 4: Pre-layout timing analysis and importance of good clock tree**</summary>
 </details>
 
 <details>
-  <summary>Day 5: Final steps for RTL2GDS using tritonRoute and openSTA</summary>
+  <summary>**Day 5: Final steps for RTL2GDS using tritonRoute and openSTA**</summary>
 </details>
