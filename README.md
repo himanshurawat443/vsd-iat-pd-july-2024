@@ -457,7 +457,8 @@ run_synthesis
 
 Screenshots of commands run
 
-![start_openlane](https://github.com/user-attachments/assets/1c78c132-628d-4e01-b550-6c100c53cd3b)
+![Day_4_start_open_lane_copy](https://github.com/user-attachments/assets/0ef0cc9f-da2d-4798-bc5f-4c30498e15f8)
+
 
 ![lef_&_synth](https://github.com/user-attachments/assets/b47f13d6-556e-454d-b00e-0e98d0acb360)
 
