@@ -410,6 +410,9 @@ set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/sr
 
 Edited config.tcl to include the added lef and change library to ones we added in src directory
 
+![edit_config_file](https://github.com/user-attachments/assets/962a0432-e8e2-436e-8f16-967ddd68a83a)
+
+
 #### 6. Run openlane flow synthesis with newly inserted custom inverter cell.
 
 Commands to invoke the OpenLANE flow include new lef and perform synthesis 
